@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import './Cart.css'
-import { MdDelete } from "react-icons/md";
 import { StoreContext } from '../../context/StoreContext'
 import { useNavigate } from 'react-router-dom';
 
@@ -32,7 +31,7 @@ const Cart = () => {
                       <p>${item.price}</p>
                       <p>{cartItems[item._id]}</p>
                       <p>${cartItems[item._id]*item.price}</p>
-                      <p className='cross' onClick={()=>removeFromCart(item._id)}><MdDelete /></p>
+                      <p className='cross' onClick={()=>removeFromCart(item._id)}>X</p>
                     </div>
                     <hr />
                 </div>
